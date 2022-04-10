@@ -32,5 +32,8 @@ export class MusicDataService {
     return this.http.delete<any>(environment.BASE_URL +"/music/" + musicId);
   }
 
+  public searchMusic(searchQuery: any): Observable<Music[]>{
+    return this.http.get<Music[]>(environment.BASE_URL + "/music?searchBy=" + searchQuery.searchBy + "&&searchString=" + searchQuery.searchString);
+  }
 
 }

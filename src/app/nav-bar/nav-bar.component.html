@@ -31,13 +31,12 @@
           </ul>
         </div>
         <div class="search">
-          <select class="form-select" aria-label="Default select example">
-            <option selected #searchBy>Search By</option>
-            <option value="id">ID</option>
-            <option value="music_name">Name</option>
+          <select class="form-select" (change)="selectChangeHandler($event)">
+            <option value="id">Id</option>
             <option value="description">Description</option>
+            <option value="music_name">Music Name</option>
           </select>
-          <input type="search" id="form1" #searchQuery />
+          <input type="search" #searchQuery id="form1" />
           <button
             type="button"
             class="btn btn-primary"

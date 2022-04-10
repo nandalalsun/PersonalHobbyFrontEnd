@@ -55,6 +55,7 @@ export class MusicDataComponent implements OnInit {
 
   musics: Music[] = [];
 
+
   constructor(private musicService: MusicDataService) { }
 
   
@@ -65,18 +66,12 @@ export class MusicDataComponent implements OnInit {
       },
       error: (err) => {
         console.log(err);
-        
       },
       complete: ()=>{
-        console.log();
+        console.log("Completed fetching music");
       }
     });
-  }
-  public deleteMusic(musicId: string){
-    console.log(musicId);
-    
-  }
-  
+  }  
 }
 
 

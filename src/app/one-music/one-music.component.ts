@@ -42,7 +42,7 @@ export class OneMusicComponent implements OnInit {
   deleteMusic(musicId: string){
     this.musicDataService.deleteMusic(musicId).subscribe({
       next: (res)=>{
-        alert("File Deleted");     
+        alert("Music Deleted");     
       },
       error: (err)=>{
         this.response.error = err;
@@ -56,9 +56,8 @@ export class OneMusicComponent implements OnInit {
 
   deleteArtist(artistId: string){
     this.musicEditService.deleteArtist(this.musics._id, artistId).subscribe({
-      next: (data)=>{
-          alert("Artist Added Successfully. " + data);
-          
+      next: (_)=>{
+          alert("Artist deleted successfully. ");
       },
       error: (err)=>{
         alert("Error: " + err);

@@ -13,6 +13,8 @@ import { OneMusicComponent } from './one-music/one-music.component';
 import { AddMusicComponent } from './add-music/add-music.component';
 import { HomeComponent } from './home/home.component';
 import { EditMusicComponent } from './edit-music/edit-music.component';
+import { SearchMusicComponent } from './search-music/search-music.component';
+
 
 
 const routes: Routes = [
@@ -28,13 +30,15 @@ const routes: Routes = [
   {
     path: "music/:musicId",
     component: OneMusicComponent
-  },
+  }, 
   {
     path: "music", 
     component: MusicDataComponent
   },
-  
-
+  {
+    path: "search",
+    component: SearchMusicComponent
+  },
   {
     path: "",
     component: HomeComponent
@@ -55,7 +59,8 @@ const routes: Routes = [
     ErrorPageComponent,
     AddMusicComponent,
     HomeComponent,
-    EditMusicComponent
+    EditMusicComponent,
+    SearchMusicComponent
   ],
   imports: [
     BrowserModule,

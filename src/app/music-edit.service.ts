@@ -10,6 +10,7 @@ import { Music } from './music-data/music-data.component';
 export class MusicEditService {
 
   public musicToEdit!: Music;
+  private searchMusicString: any; 
 
   constructor(private http: HttpClient) {  }
 
@@ -30,6 +31,12 @@ export class MusicEditService {
    }
    public getMusicToEdit(): Music{
      return this.musicToEdit;
+   }
+   public setSearchMusicString(searchString: any){
+    this.searchMusicString = searchString;
+   }
+   public getMusicToSearch(): any{
+     return this.searchMusicString;
    }
 }
 
